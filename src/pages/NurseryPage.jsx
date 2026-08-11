@@ -97,7 +97,13 @@ export const NurseryPage = ({ openDevisModal }) => {
                 <div 
                   key={product.id}
                   className="card-hover"
-                  style={{ display: 'flex', flexDirection: 'column', background: 'white' }}
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    background: 'white',
+                    border: product.isCustom ? '2px solid var(--gold)' : '1px solid rgba(0,0,0,0.05)',
+                    boxShadow: product.isCustom ? '0 8px 24px rgba(212,175,55,0.2)' : 'var(--shadow-sm)'
+                  }}
                 >
                   <div style={{ position: 'relative', height: '220px', overflow: 'hidden' }}>
                     <img 
@@ -107,51 +113,41 @@ export const NurseryPage = ({ openDevisModal }) => {
                     />
                     <span style={{
                       position: 'absolute', top: '1rem', right: '1rem',
-                      background: 'var(--primary-dark)', color: 'var(--bright-lime)',
-                      padding: '0.3rem 0.8rem', borderRadius: 'var(--radius-full)',
-                      fontSize: '0.75rem', fontWeight: 800
+                      background: product.isCustom ? 'var(--gold)' : 'var(--primary-dark)',
+                      color: product.isCustom ? 'var(--primary-dark)' : 'var(--bright-lime)',
+                      padding: '0.35rem 0.85rem', borderRadius: 'var(--radius-full)',
+                      fontSize: '0.78rem', fontWeight: 800
                     }}>
                       {product.badge}
                     </span>
                   </div>
 
                   <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
-                    <span style={{ color: 'var(--primary-leaf)', fontSize: '0.78rem', fontWeight: 700, textTransform: 'uppercase' }}>
+                    <span style={{ color: product.isCustom ? 'var(--gold-hover)' : 'var(--primary-leaf)', fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase' }}>
                       {product.categoryLabel}
                     </span>
                     <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--primary-dark)', margin: '0.3rem 0' }}>
                       {product.name}
                     </h3>
-                    <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1rem', flex: 1 }}>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.25rem', flex: 1 }}>
                       {product.description}
                     </p>
-
-                    {/* Specs chips */}
-                    {product.specs && (
-                      <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
-                        {Object.entries(product.specs).map(([key, val]) => (
-                          <span key={key} style={{ background: 'var(--light-sage)', color: 'var(--primary-forest)', padding: '0.2rem 0.6rem', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 600 }}>
-                            {key}: {val}
-                          </span>
-                        ))}
-                      </div>
-                    )}
 
                     <div style={{
                       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                       paddingTop: '1rem', borderTop: '1px solid #F3F4F6', marginTop: 'auto'
                     }}>
                       <div>
-                        <span style={{ fontSize: '0.75rem', color: 'var(--text-light)', display: 'block' }}>Tarif estimé</span>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--text-light)', display: 'block' }}>Tarification</span>
                         <strong style={{ fontSize: '1.05rem', color: 'var(--primary-forest)', fontWeight: 800 }}>{product.price}</strong>
                       </div>
 
                       <button 
-                        className="btn-primary"
+                        className={product.isCustom ? "btn-gold" : "btn-primary"}
                         style={{ padding: '0.55rem 1rem', fontSize: '0.85rem' }}
-                        onClick={() => openDevisModal(`Achat Pépinière : ${product.name}`)}
+                        onClick={() => openDevisModal(product.isCustom ? "Demande de Végétal au Choix / Sur-Mesure" : `Achat Pépinière : ${product.name}`)}
                       >
-                        Commander / Devis
+                        {product.isCustom ? "Demander ma Plante" : "Commander / Devis"}
                       </button>
                     </div>
                   </div>

@@ -29,7 +29,7 @@ export const Footer = ({ setActiveTab, openDevisModal, onSelectService }) => {
               </div>
             </div>
             <p className="footer-desc">
-              L'expert reconnu à Fès et sa région pour l'aménagement, l'entretien des espaces verts, l'installation de systèmes d'irrigation et la vente en pépinière.
+              L'expert reconnu dans la région Fès Meknès pour l'aménagement, l'entretien des espaces verts, l'installation de systèmes d'irrigation et la vente en pépinière.
             </p>
             <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.5rem' }}>
               <button className="btn-gold" onClick={openDevisModal}>
@@ -100,7 +100,7 @@ export const Footer = ({ setActiveTab, openDevisModal, onSelectService }) => {
         <div className="footer-bottom">
           <p>© {new Date().getFullYear()} {companyInfo.name}. Tous droits réservés. Qualité & Engagement Paysager.</p>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <span>Fès - Meknès - Maroc</span>
+            <span>Région Fès Meknès - Maroc</span>
           </div>
         </div>
       </div>

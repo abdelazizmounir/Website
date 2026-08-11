@@ -16,7 +16,7 @@ export const AboutPage = ({ openDevisModal }) => {
             L'Expertise Paysagère au Service de Vos Espaces Verts
           </h1>
           <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.85)', maxWidth: '720px', margin: '0 auto' }}>
-            Implantée à Fès, AM GREEN ART SARL AU est spécialisée dans l'étude, l'aménagement, l'entretien des espaces verts et la commercialisation de végétaux et matériels d'arrosage.
+            Implantée dans la région Fès Meknès, AM GREEN ART SARL AU est spécialisée dans l'étude, l'aménagement, l'entretien des espaces verts et la commercialisation de végétaux et matériels d'arrosage.
           </p>
         </div>
       </section>
@@ -31,7 +31,7 @@ export const AboutPage = ({ openDevisModal }) => {
                 Une Passion Botanique & <span>Un Rigueur Technique</span>
               </h2>
               <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '1.5rem' }}>
-                Fondée avec la volonté d'offrir un service d'excellence paysagère à Fès et dans la région, AM GREEN ART regroupe des spécialistes de l'horticulture, de l'irrigation et de l'aménagement extérieur.
+                Fondée avec la volonté d'offrir un service d'excellence paysagère dans la région Fès Meknès, AM GREEN ART regroupe des spécialistes de l'horticulture, de l'irrigation et de l'aménagement extérieur.
               </p>
               <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '2rem' }}>
                 Que vous soyez un particulier souhaitant sublimer le jardin de votre villa, ou un gestionnaire de résidence / complexe industriel à la recherche d'un contrat de maintenance annuel rigoureux, nous apportons des solutions sur-mesure et écologiques.

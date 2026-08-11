@@ -103,22 +103,33 @@ export const ContactPage = () => {
                 </div>
               </div>
 
-              {/* Map Placeholder Visual Card */}
+              {/* Map Visual Card */}
               <div className="card-hover" style={{ padding: '1.5rem', background: 'white' }}>
-                <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--primary-dark)', marginBottom: '0.5rem' }}>
-                  Zone d'Intervention
-                </h3>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--primary-dark)', margin: 0 }}>
+                    Zone d'Intervention
+                  </h3>
+                  <span className="badge-tag" style={{ background: '#E8F5E9', color: '#1B5E20', margin: 0 }}>
+                    <MapPin size={13} /> Région Fès Meknès
+                  </span>
+                </div>
                 <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>
-                  Intervention rapide sur l'ensemble de la préfecture de Fès, Meknès, Séfrou, Ifrane et région.
+                  Intervention rapide dans toute la région Fès Meknès.
                 </p>
                 <div style={{
-                  height: '180px', borderRadius: 'var(--radius-sm)', background: 'linear-gradient(135deg, var(--light-sage), #D1E7DD)',
-                  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '1rem',
-                  border: '1px stroke rgba(46,125,50,0.3)'
+                  height: '280px', borderRadius: 'var(--radius-md)', overflow: 'hidden',
+                  border: '1px solid rgba(46,125,50,0.2)', boxShadow: 'var(--shadow-sm)'
                 }}>
-                  <MapPin size={36} color="var(--primary-forest)" />
-                  <strong style={{ color: 'var(--primary-dark)', marginTop: '0.5rem', fontSize: '1.1rem' }}>Fès & Région Centre-Nord, Maroc</strong>
-                  <span style={{ fontSize: '0.82rem', color: 'var(--primary-leaf)', fontWeight: 600 }}>Siège: Allal Ben Abdallah, Lipodrom Fès</span>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211752.48797195632!2d-5.403257121351745!3d33.97628092230989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f8b484d445777%3A0x10e6aaaeedd802ef!2sFes!5e0!3m2!1sen!2sma!4v1786466045808!5m2!1sen!2sma"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    title="Carte Zone d'Intervention Fès"
+                  ></iframe>
                 </div>
               </div>
             </div>
@@ -215,6 +226,43 @@ export const ContactPage = () => {
                 </form>
               )}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Big Interactive Map Section */}
+      <section className="section-padding" style={{ background: 'white', borderTop: '1px solid #E5E7EB' }}>
+        <div className="container">
+          <div className="section-header">
+            <span className="badge-tag">
+              <MapPin size={14} /> Carte Interactive Google Maps
+            </span>
+            <h2 className="section-title">
+              Localisation & <span>Zone d'Intervention</span>
+            </h2>
+            <p className="section-subtitle">
+              Retrouvez le périmètre d'intervention de la société AM GREEN ART dans la région Fès Meknès.
+            </p>
+          </div>
+
+          <div style={{
+            height: '480px',
+            width: '100%',
+            borderRadius: 'var(--radius-lg)',
+            overflow: 'hidden',
+            boxShadow: 'var(--shadow-lg)',
+            border: '2px solid var(--light-sage)'
+          }}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211752.48797195632!2d-5.403257121351745!3d33.97628092230989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f8b484d445777%3A0x10e6aaaeedd802ef!2sFes!5e0!3m2!1sen!2sma!4v1786466045808!5m2!1sen!2sma"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              title="Zone d'Intervention AM GREEN ART"
+            ></iframe>
           </div>
         </div>
       </section>

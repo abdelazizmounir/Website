@@ -3,7 +3,7 @@ export const companyInfo = {
   shortName: "AMGA",
   subtitle: "ESPACE VERT",
   tagline: "L'Expert de l'Espace Vert",
-  slogan: "Création, Aménagement et Entretien des Espaces Verts à Fès & Région",
+  slogan: "Création, Aménagement et Entretien des Espaces Verts dans la région Fès Meknès",
   legal: {
     form: "SARL AU",
     capital: "100 000,00 DH",
@@ -22,8 +22,8 @@ export const companyInfo = {
     whatsapp: "212605982109",
     email: "Societeamgreenart01@gmail.com",
     emailAlt: "societeamgreenart0@gmail.com",
-    city: "Fès, Maroc",
-    locationDesc: "Intervention rapide à Fès, Meknès, et dans toute la région."
+    city: "Région Fès Meknès, Maroc",
+    locationDesc: "Intervention rapide dans la région Fès Meknès."
   },
   whyChooseUs: [
     {
@@ -65,7 +65,7 @@ export const companyInfo = {
   ],
   stats: [
     { label: "Projets Réalisés", value: "250+" },
-    { label: "Années d'Expérience", value: "10+" },
+    { label: "Années d'Expérience", value: "6 ans" },
     { label: "Satisfaction Client", value: "99%" },
     { label: "Plantes & Équipements", value: "1000+" }
   ]

@@ -61,7 +61,7 @@ export const WhyChooseUs = ({ openDevisModal }) => {
         }}>
           <div>
             <span style={{ color: 'var(--bright-lime)', fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px' }}>
-              Service Proximité Fès & Région
+              Service Proximité Région Fès Meknès
             </span>
             <h3 style={{ fontSize: '1.8rem', fontWeight: 800, marginTop: '0.25rem' }}>
               Besoin d'une Intervention ou d'un Contrat d'Entretien ?

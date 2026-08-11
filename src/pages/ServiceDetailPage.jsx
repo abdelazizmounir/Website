@@ -150,7 +150,7 @@ export const ServiceDetailPage = ({ service, onBack, openDevisModal, onSelectSer
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.85rem', color: 'rgba(255,255,255,0.85)' }}>
                   <Clock size={16} color="var(--bright-lime)" />
-                  <span>Intervention Fès & Région</span>
+                  <span>Intervention Région Fès Meknès</span>
                 </div>
               </div>
             </div>
@@ -268,7 +268,7 @@ export const ServiceDetailPage = ({ service, onBack, openDevisModal, onSelectSer
                   Besoin de {service.shortTitle} ?
                 </h3>
                 <p style={{ fontSize: '0.94rem', color: 'rgba(255,255,255,0.85)', marginBottom: '1.5rem', lineHeight: 1.6 }}>
-                  Nos équipes qualifiées interviennent rapidement à Fès et dans toute la région avec garantie de qualité et respect des délais.
+                  Nos équipes qualifiées interviennent rapidement dans la région Fès Meknès avec garantie de qualité et respect des délais.
                 </p>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>

@@ -41,7 +41,7 @@ export const HomePage = ({ setActiveTab, onSelectService, openDevisModal }) => {
                 padding: '0.5rem 1.2rem', fontSize: '0.86rem', boxShadow: '0 4px 16px rgba(0,0,0,0.3)',
                 margin: 0
               }}>
-                <Sparkles size={15} color="var(--bright-lime)" /> Paysagiste N°1 & Irrigation à Fès
+                <Sparkles size={15} color="var(--bright-lime)" /> Paysagiste N°1 & Irrigation dans la région Fès Meknès
               </span>
             </div>
 
@@ -50,7 +50,7 @@ export const HomePage = ({ setActiveTab, onSelectService, openDevisModal }) => {
             </h1>
 
             <p className="hero-desc" style={{ fontSize: '1.15rem', lineHeight: 1.65, marginBottom: '1.75rem', color: 'rgba(255,255,255,0.92)' }}>
-              Expertise globale pour villas, résidences & professionnels à Fès & région : irrigation automatique intelligente, conception 3D sur-mesure, tonte de pelouse, élagage de palmiers et vente directe en pépinière.
+              Expertise globale pour villas, résidences & professionnels dans la région Fès Meknès : irrigation automatique intelligente, conception 3D sur-mesure, tonte de pelouse, élagage de palmiers et vente directe en pépinière.
             </p>
 
             {/* Quick Interactive Service Selector Pills */}
@@ -256,7 +256,7 @@ export const HomePage = ({ setActiveTab, onSelectService, openDevisModal }) => {
       <section style={{ background: 'linear-gradient(135deg, var(--primary-forest), var(--primary-dark))', color: 'white', padding: '4rem 0', textAlign: 'center' }}>
         <div className="container">
           <h2 style={{ fontSize: '2.4rem', fontWeight: 800, marginBottom: '1rem' }}>
-            Un Projet d'Espace Vert à Fès ou en Région ?
+            Un Projet d'Espace Vert dans la région Fès Meknès ?
           </h2>
           <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.85)', maxWidth: '680px', margin: '0 auto 2rem auto' }}>
             Contactez AM GREEN ART dès aujourd'hui pour bénéficier de devis gratuit, d'une intervention rapide et de conseils professionnels.

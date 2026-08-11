@@ -91,7 +91,7 @@ export const PortfolioPage = ({ openDevisModal }) => {
             <Sparkles size={14} /> Galerie & Savoir-Faire
           </span>
           <h1 style={{ fontSize: '3rem', fontWeight: 800, marginTop: '0.75rem', marginBottom: '1rem' }}>
-            Nos Réalisations Paysagères à Fès & Région
+            Nos Réalisations Paysagères dans la région Fès Meknès
           </h1>
           <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.85)', maxWidth: '700px', margin: '0 auto' }}>
             Découvrez un aperçu de nos projets d'aménagement, d'installation d'irrigation et de contrats d'entretien réussis.
