@@ -85,7 +85,7 @@ export const DevisModal = ({ isOpen, onClose, defaultService }) => {
             </p>
 
             <form onSubmit={handleSubmit}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <div className="form-grid-2">
                 <div className="form-group">
                   <label className="form-label">Nom Complet *</label>
                   <input
@@ -111,7 +111,7 @@ export const DevisModal = ({ isOpen, onClose, defaultService }) => {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <div className="form-grid-2">
                 <div className="form-group">
                   <label className="form-label">Service Souhaité *</label>
                   <select

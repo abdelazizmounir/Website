@@ -641,12 +641,22 @@ button {
   box-shadow: 0 0 0 3px rgba(27, 77, 46, 0.12);
 }
 
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
 /* Mobile responsive menu */
 .mobile-menu-btn {
   display: none;
   background: none;
   color: var(--primary-forest);
 }
+
+/* ---------------------------------------------------- */
+/* Comprehensive 100% Mobile Responsive Styles         */
+/* ---------------------------------------------------- */
 
 @media (max-width: 992px) {
   .nav-links {
@@ -655,6 +665,8 @@ button {
 
   .mobile-menu-btn {
     display: block;
+    padding: 0.25rem;
+    z-index: 1001;
   }
 
   .nav-links.mobile-open {
@@ -669,18 +681,138 @@ button {
     box-shadow: var(--shadow-lg);
     gap: 1.25rem;
     border-bottom: 1px solid #E5E7EB;
-  }
-
-  .hero-title {
-    font-size: 2.25rem;
+    z-index: 1000;
   }
 
   .footer-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .section-padding {
+    padding: 3.25rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2.25rem;
+  }
+
+  .section-title {
+    font-size: 1.85rem !important;
+  }
+
+  .section-subtitle {
+    font-size: 0.98rem !important;
+  }
+
+  /* Grid Layouts collapse to 1 column on tablet/mobile */
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .hero-wrapper {
+    min-height: auto;
+    padding: 3rem 0 3.5rem 0;
+  }
+
+  .hero-title {
+    font-size: 2.1rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero-desc {
+    font-size: 1.02rem !important;
+    margin-bottom: 1.5rem !important;
   }
 
   .hero-stats-row {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+    padding: 1rem !important;
+  }
+
+  .stat-value {
+    font-size: 1.45rem !important;
+  }
+
+  .stat-label {
+    font-size: 0.72rem !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .phone-desktop-only {
+    display: none;
+  }
+
+  .logo-img {
+    height: 52px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .hero-cta-group button, .hero-cta-group a {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Modal responsiveness */
+  .modal-card {
+    padding: 1.35rem 1rem !important;
+    width: 95% !important;
+    max-height: 92vh !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .modal-backdrop {
+    padding: 0.5rem;
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Floating WhatsApp button position on mobile */
+  .whatsapp-float {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+@media (max-width: 480px) {
+  .badge-tag {
+    font-size: 0.76rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .btn-primary, .btn-gold, .btn-outline, .btn-outline-white {
+    padding: 0.7rem 1.25rem;
+    font-size: 0.9rem;
   }
 }
