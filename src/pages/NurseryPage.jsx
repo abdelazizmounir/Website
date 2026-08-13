@@ -1,17 +1,49 @@
-import React, { useState } from 'react';
-import { Search, Filter, Leaf, ShoppingBag, Sparkles, Check, ArrowRight, Phone } from 'lucide-react';
-import { nurseryCategories, nurseryProducts } from '../data/nurseryData';
+import React, { useState, useEffect } from 'react';
+import { Search, Filter, Leaf, ShoppingBag, Sparkles, Check, ArrowRight, Phone, RefreshCw } from 'lucide-react';
+import { nurseryCategories, nurseryProducts as defaultProducts } from '../data/nurseryData';
 import { companyInfo } from '../data/companyData';
+import { supabase } from '../lib/supabase';
 
 export const NurseryPage = ({ openDevisModal }) => {
+  const [products, setProducts] = useState(defaultProducts);
+  const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [activePlantModal, setActivePlantModal] = useState(null);
 
-  const filteredProducts = nurseryProducts.filter(item => {
+  useEffect(() => {
+    const fetchSupabaseProducts = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('nursery_products')
+          .select('*')
+          .order('display_order', { ascending: true })
+          .order('created_at', { ascending: false });
+
+        if (error) {
+          console.error('Supabase fetch error:', error);
+        } else if (data && data.length > 0) {
+          // Normalize properties
+          const formatted = data.map(item => ({
+            ...item,
+            categoryLabel: item.category_label || item.categoryLabel || 'Plantes Ornementales',
+            isCustom: item.is_custom || item.isCustom || false
+          }));
+          setProducts(formatted);
+        }
+      } catch (err) {
+        console.error('Error fetching plants:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchSupabaseProducts();
+  }, []);
+
+  const filteredProducts = products.filter(item => {
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
     const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          item.description.toLowerCase().includes(searchQuery.toLowerCase());
+                          (item.description && item.description.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
@@ -20,9 +52,6 @@ export const NurseryPage = ({ openDevisModal }) => {
       {/* Hero Banner */}
       <section style={{ background: 'linear-gradient(135deg, var(--primary-dark), var(--primary-forest))', color: 'white', padding: '4rem 0 5rem 0' }}>
         <div className="container" style={{ textAlign: 'center' }}>
-          <span className="badge-tag" style={{ background: 'rgba(255,255,255,0.15)', color: 'var(--bright-lime)' }}>
-            <Leaf size={14} /> Pépinière & Vente en Gros & Détail
-          </span>
           <h1 style={{ fontSize: '3rem', fontWeight: 800, marginTop: '0.75rem', marginBottom: '1rem' }}>
             Vente de Plantes Ornementales, Arbres & Équipements
           </h1>
@@ -163,7 +192,6 @@ export const NurseryPage = ({ openDevisModal }) => {
             display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem'
           }}>
             <div>
-              <span className="badge-tag">Service Professionnel & Gros</span>
               <h3 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--primary-dark)' }}>
                 Commandes Spéciales ou Quantités Importantes ?
               </h3>

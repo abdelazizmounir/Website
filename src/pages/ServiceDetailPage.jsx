@@ -59,14 +59,6 @@ export const ServiceDetailPage = ({ service, onBack, openDevisModal, onSelectSer
             {/* Left Column: Headlines, Highlights & Actions */}
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
-                <span className="badge-tag" style={{
-                  background: 'rgba(15, 51, 29, 0.85)', color: 'var(--bright-lime)',
-                  border: '1px solid rgba(102, 187, 106, 0.4)', backdropFilter: 'blur(8px)',
-                  padding: '0.45rem 1.1rem', fontSize: '0.85rem', boxShadow: '0 4px 14px rgba(0,0,0,0.25)',
-                  margin: 0
-                }}>
-                  <Sparkles size={14} color="var(--bright-lime)" /> {service.category}
-                </span>
                 <span style={{
                   background: 'rgba(212, 175, 55, 0.2)', color: 'var(--gold)',
                   border: '1px solid rgba(212, 175, 55, 0.4)', borderRadius: 'var(--radius-full)',

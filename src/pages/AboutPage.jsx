@@ -9,9 +9,6 @@ export const AboutPage = ({ openDevisModal }) => {
       {/* Hero */}
       <section style={{ background: 'linear-gradient(135deg, var(--primary-dark), var(--primary-forest))', color: 'white', padding: '4rem 0 5rem 0', textAlign: 'center' }}>
         <div className="container">
-          <span className="badge-tag" style={{ background: 'rgba(255,255,255,0.15)', color: 'var(--bright-lime)' }}>
-            À Propos de la Société AM GREEN ART
-          </span>
           <h1 style={{ fontSize: '3rem', fontWeight: 800, marginTop: '0.75rem', marginBottom: '1rem' }}>
             L'Expertise Paysagère au Service de Vos Espaces Verts
           </h1>
@@ -26,7 +23,6 @@ export const AboutPage = ({ openDevisModal }) => {
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'center', gap: '3.5rem' }}>
             <div>
-              <span className="badge-tag">Notre Identité</span>
               <h2 className="section-title">
                 Une Passion Botanique & <span>Un Rigueur Technique</span>
               </h2>

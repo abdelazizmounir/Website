@@ -113,14 +113,14 @@ button {
 }
 
 .logo-img {
-  height: 78px;
+  height: 105px;
   width: auto;
   object-fit: contain;
   border-radius: var(--radius-sm);
   background: white;
   padding: 4px;
-  box-shadow: 0 4px 12px rgba(27, 77, 46, 0.12);
-  transition: transform 0.25 ease;
+  box-shadow: 0 4px 14px rgba(27, 77, 46, 0.15);
+  transition: transform 0.25s ease;
 }
 
 .logo-img:hover {
@@ -764,7 +764,7 @@ button {
   }
 
   .logo-img {
-    height: 52px;
+    height: 72px;
   }
 
   .hero-cta-group {

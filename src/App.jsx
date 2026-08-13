@@ -11,6 +11,7 @@ import { NurseryPage } from './pages/NurseryPage';
 import { PortfolioPage } from './pages/PortfolioPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import { AdminPage } from './pages/AdminPage';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -77,6 +78,13 @@ export default function App() {
         );
       case 'contact':
         return <ContactPage />;
+      case 'admin':
+        return (
+          <AdminPage 
+            openDevisModal={handleOpenDevisModal} 
+            setActiveTab={setActiveTab}
+          />
+        );
       default:
         return (
           <HomePage 

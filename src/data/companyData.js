@@ -63,8 +63,12 @@ export const companyInfo = {
       icon: "CalendarCheck"
     }
   ],
+  social: {
+    instagram: "https://www.instagram.com/societe_amgreen_art?igsh=NzB6cGpjN2FxY2Rh",
+    facebook: "https://www.facebook.com/share/1HSXGMEHMU/"
+  },
   stats: [
-    { label: "Projets Réalisés", value: "250+" },
+    { label: "Projets Réalisés", value: "+80" },
     { label: "Années d'Expérience", value: "6 ans" },
     { label: "Satisfaction Client", value: "99%" },
     { label: "Plantes & Équipements", value: "1000+" }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Send, CheckCircle2, Clock, MessageSquare } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { companyInfo } from '../data/companyData';
 
@@ -25,9 +25,6 @@ export const ContactPage = () => {
       {/* Header */}
       <section style={{ background: 'linear-gradient(135deg, var(--primary-dark), var(--primary-forest))', color: 'white', padding: '4rem 0 5rem 0', textAlign: 'center' }}>
         <div className="container">
-          <span className="badge-tag" style={{ background: 'rgba(255,255,255,0.15)', color: 'var(--bright-lime)' }}>
-            <MessageSquare size={14} /> Réactivité & Proximité
-          </span>
           <h1 style={{ fontSize: '3rem', fontWeight: 800, marginTop: '0.75rem', marginBottom: '1rem' }}>
             Contactez AM GREEN ART
           </h1>
@@ -90,7 +87,7 @@ export const ContactPage = () => {
                   </div>
                 </div>
 
-                <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid #E5E7EB', display: 'flex', gap: '1rem' }}>
+                <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid #E5E7EB', display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
                   <a 
                     href={`https://wa.me/${companyInfo.contact.whatsapp}?text=Bonjour%20AM%20GREEN%20ART`}
                     target="_blank"
@@ -98,7 +95,29 @@ export const ContactPage = () => {
                     className="btn-primary"
                     style={{ background: '#25D366', flex: 1, justifyContent: 'center' }}
                   >
-                    Envoyer un message WhatsApp
+                    WhatsApp Direct
+                  </a>
+                  <a 
+                    href={companyInfo.social.instagram}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      background: '#E1306C', color: 'white', padding: '0.75rem 1rem', borderRadius: 'var(--radius-full)',
+                      fontWeight: 700, fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', textDecoration: 'none'
+                    }}
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg> Instagram
+                  </a>
+                  <a 
+                    href={companyInfo.social.facebook}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      background: '#1877F2', color: 'white', padding: '0.75rem 1rem', borderRadius: 'var(--radius-full)',
+                      fontWeight: 700, fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', textDecoration: 'none'
+                    }}
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> Facebook
                   </a>
                 </div>
               </div>
@@ -109,9 +128,6 @@ export const ContactPage = () => {
                   <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--primary-dark)', margin: 0 }}>
                     Zone d'Intervention
                   </h3>
-                  <span className="badge-tag" style={{ background: '#E8F5E9', color: '#1B5E20', margin: 0 }}>
-                    <MapPin size={13} /> Région Fès Meknès
-                  </span>
                 </div>
                 <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>
                   Intervention rapide dans toute la région Fès Meknès.
@@ -234,9 +250,6 @@ export const ContactPage = () => {
       <section className="section-padding" style={{ background: 'white', borderTop: '1px solid #E5E7EB' }}>
         <div className="container">
           <div className="section-header">
-            <span className="badge-tag">
-              <MapPin size={14} /> Carte Interactive Google Maps
-            </span>
             <h2 className="section-title">
               Localisation & <span>Zone d'Intervention</span>
             </h2>

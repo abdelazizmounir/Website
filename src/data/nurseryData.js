@@ -6,7 +6,7 @@ export const nurseryCategories = [
 export const nurseryProducts = [
   {
     id: "p1",
-    name: "Bougainvillier Rose Éclatant",
+    name: "Phalaenopis Anthura Stellnbocsh",
     category: "plantes-ornementales",
     categoryLabel: "Plantes Ornementales",
     price: "Sur Devis",
@@ -16,7 +16,7 @@ export const nurseryProducts = [
   },
   {
     id: "p2",
-    name: "Palmier Washingtonia Sujet d'Exception",
+    name: "Spathiphyllum floribundum",
     category: "plantes-ornementales",
     categoryLabel: "Plantes Ornementales",
     price: "Sur Devis",
@@ -26,7 +26,7 @@ export const nurseryProducts = [
   },
   {
     id: "p3",
-    name: "Olivier d'Ornement Vénérable",
+    name: "Monstera deliciosa",
     category: "plantes-ornementales",
     categoryLabel: "Plantes Ornementales",
     price: "Sur Devis",
@@ -56,7 +56,7 @@ export const nurseryProducts = [
   },
   {
     id: "p6",
-    name: "Ficus Nitida / Retusa Taille Boule",
+    name: "Yucca elephantipis",
     category: "plantes-ornementales",
     categoryLabel: "Plantes Ornementales",
     price: "Sur Devis",
@@ -66,7 +66,7 @@ export const nurseryProducts = [
   },
   {
     id: "p7",
-    name: "Engrais Bio Organique Équilibré NPK (25kg)",
+    name: "laurier rose",
     category: "plantes-ornementales",
     categoryLabel: "Plantes Ornementales",
     price: "Sur Devis",
@@ -76,7 +76,7 @@ export const nurseryProducts = [
   },
   {
     id: "p8",
-    name: "Programmateur d'Irrigation Automatique 4 Zones",
+    name: "plumbago auriculata",
     category: "plantes-ornementales",
     categoryLabel: "Plantes Ornementales",
     price: "Sur Devis",
@@ -86,7 +86,7 @@ export const nurseryProducts = [
   },
   {
     id: "p9",
-    name: "Kit Tuyau d'Arrosage Pro & Pistolet 8 Jet",
+    name: "laurier rose",
     category: "plantes-ornementales",
     categoryLabel: "Plantes Ornementales",
     price: "Sur Devis",

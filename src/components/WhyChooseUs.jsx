@@ -16,9 +16,6 @@ export const WhyChooseUs = ({ openDevisModal }) => {
     <section className="section-padding" style={{ background: 'white' }}>
       <div className="container">
         <div className="section-header">
-          <span className="badge-tag">
-            <CheckCircle2 size={14} /> Notre Engagement Qualité
-          </span>
           <h2 className="section-title">
             Pourquoi Choisir <span>AM GREEN ART</span> ?
           </h2>

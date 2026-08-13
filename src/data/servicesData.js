@@ -37,7 +37,7 @@ export const servicesData = [
   {
     id: "tonte-gazon",
     slug: "tonte-du-gazon",
-    title: "Travaux d'Entretien : Tonte du Gazon",
+    title: "Travaux d'Entretien",
     shortTitle: "Tonte du Gazon",
     category: "Entretien Régulier",
     badge: "Gazon Récurrence",
@@ -177,7 +177,6 @@ export const servicesData = [
     image: "/img/conception paysagère (1).jpg",
     images: [
       "/img/conception paysagère (1).jpg",
-      "/img/conception paysagère (2).jpg",
       "/img/conception paysagère (3).jpg",
       "/img/conception paysagère (4).jpg",
       "/img/conception paysagère (5).jpg",

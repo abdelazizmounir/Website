@@ -33,25 +33,39 @@ export const HomePage = ({ setActiveTab, onSelectService, openDevisModal }) => {
         }} />
 
         <div className="container" style={{ position: 'relative', zIndex: 3, width: '100%' }}>
+          
+          {/* Prominent Hero Top Logo (Horizontally Centered) */}
+          <div style={{ textAlign: 'center', width: '100%', marginBottom: '1.75rem' }}>
+            <img 
+              src="/images/logo.png" 
+              alt="AM Green ART Logo" 
+              style={{
+                height: '115px',
+                width: 'auto',
+                objectFit: 'contain',
+                background: 'rgba(255, 255, 255, 0.96)',
+                padding: '8px 20px',
+                borderRadius: '20px',
+                boxShadow: '0 12px 35px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(255, 255, 255, 0.3)',
+                backdropFilter: 'blur(10px)',
+                display: 'inline-block',
+                transition: 'transform 0.3s ease'
+              }}
+            />
+          </div>
+
           <div className="hero-content animate-fade-in" style={{ maxWidth: '780px' }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1.25rem' }}>
-              <span className="badge-tag" style={{
-                background: 'rgba(15, 51, 29, 0.85)', color: 'var(--bright-lime)',
-                border: '1px solid rgba(102, 187, 106, 0.4)', backdropFilter: 'blur(10px)',
-                padding: '0.5rem 1.2rem', fontSize: '0.86rem', boxShadow: '0 4px 16px rgba(0,0,0,0.3)',
-                margin: 0
-              }}>
-                <Sparkles size={15} color="var(--bright-lime)" /> Paysagiste N°1 & Irrigation dans la région Fès Meknès
-              </span>
-            </div>
-
-            <h1 className="hero-title" style={{ fontSize: 'clamp(2.4rem, 4.5vw, 3.5rem)', lineHeight: 1.15, marginBottom: '1.25rem' }}>
-              Création, Aménagement & <span style={{ color: 'var(--bright-lime)', display: 'block' }}>Entretien des Espaces Verts</span>
+            <h1 className="hero-title" style={{ 
+              fontSize: 'clamp(2.8rem, 5.8vw, 4.2rem)', 
+              fontWeight: 900, 
+              lineHeight: 1.12, 
+              marginBottom: '2rem', 
+              color: '#FFFFFF',
+              textShadow: '0 4px 20px rgba(0,0,0,0.6)',
+              letterSpacing: '-0.5px'
+            }}>
+              Création, Aménagement & <span style={{ color: 'var(--bright-lime)', display: 'block', textShadow: '0 0 30px rgba(102,187,106,0.6)' }}>Entretien des Espaces Verts</span>
             </h1>
-
-            <p className="hero-desc" style={{ fontSize: '1.15rem', lineHeight: 1.65, marginBottom: '1.75rem', color: 'rgba(255,255,255,0.92)' }}>
-              Expertise globale pour villas, résidences & professionnels dans la région Fès Meknès : irrigation automatique intelligente, conception 3D sur-mesure, tonte de pelouse, élagage de palmiers et vente directe en pépinière.
-            </p>
 
             {/* Quick Interactive Service Selector Pills */}
             <div style={{ marginBottom: '2rem' }}>
@@ -132,7 +146,6 @@ export const HomePage = ({ setActiveTab, onSelectService, openDevisModal }) => {
       <section className="section-padding" style={{ background: 'var(--cream-bg)' }}>
         <div className="container">
           <div className="section-header">
-            <span className="badge-tag">Nos Domaines d'Expertise</span>
             <h2 className="section-title">
               7 Services Paysagers <span>Sur-Mesure</span>
             </h2>
@@ -219,7 +232,6 @@ export const HomePage = ({ setActiveTab, onSelectService, openDevisModal }) => {
             </div>
 
             <div>
-              <span className="badge-tag">Espace Vente & Pépinière</span>
               <h2 className="section-title">
                 Fourniture & Vente de <span>Végétaux d'Exception</span>
               </h2>

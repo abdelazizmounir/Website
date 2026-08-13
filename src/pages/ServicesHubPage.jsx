@@ -9,9 +9,6 @@ export const ServicesHubPage = ({ onSelectService, openDevisModal }) => {
       {/* Header */}
       <section style={{ background: 'linear-gradient(135deg, var(--primary-dark), var(--primary-forest))', color: 'white', padding: '4rem 0 5rem 0' }}>
         <div className="container" style={{ textAlign: 'center' }}>
-          <span className="badge-tag" style={{ background: 'rgba(255,255,255,0.15)', color: 'var(--bright-lime)' }}>
-            Catalogue Complet de Prestations
-          </span>
           <h1 style={{ fontSize: '3rem', fontWeight: 800, marginTop: '0.75rem', marginBottom: '1rem' }}>
             Nos 7 Services Paysagers & Entretien
           </h1>

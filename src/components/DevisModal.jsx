@@ -146,12 +146,6 @@ export const DevisModal = ({ isOpen, onClose, defaultService }) => {
             {orderType === 'plant' ? (
               /* ================= PLANT PURCHASE FORM ================= */
               <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
-                  <span className="badge-tag" style={{ background: '#E8F5E9', color: '#1B5E20' }}>
-                    <ShoppingBag size={14} /> Pépinière & Végétaux AM GREEN ART
-                  </span>
-                </div>
-
                 <h3 style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--primary-dark)', marginBottom: '0.3rem' }}>
                   Commander vos Plantes sur Devis
                 </h3>
@@ -268,12 +262,6 @@ export const DevisModal = ({ isOpen, onClose, defaultService }) => {
             ) : (
               /* ================= SERVICES QUOTE FORM ================= */
               <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
-                  <span className="badge-tag" style={{ background: '#FEF3C7', color: '#B45309' }}>
-                    <Sparkles size={14} /> 100% Gratuit & Sans Engagement
-                  </span>
-                </div>
-
                 <h3 style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--primary-dark)', marginBottom: '0.3rem' }}>
                   Demander un Devis Gratuit
                 </h3>
