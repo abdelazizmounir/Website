@@ -81,7 +81,7 @@ export const ContactPage = () => {
                     <div>
                       <strong style={{ display: 'block', fontSize: '0.9rem', color: 'var(--text-light)', textTransform: 'uppercase' }}>Siège Social</strong>
                       <p style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--primary-dark)', lineHeight: 1.5 }}>
-                        {companyInfo.legal.address}
+                        {companyInfo.address}
                       </p>
                     </div>
                   </div>

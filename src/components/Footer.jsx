@@ -112,13 +112,13 @@ export const Footer = ({ setActiveTab, openDevisModal, onSelectService }) => {
             </ul>
           </div>
 
-          {/* Contact & Legal */}
+          {/* Contact & Coordonnées */}
           <div>
             <h4 className="footer-heading">Coordonnées & Siège</h4>
             <ul className="footer-links" style={{ marginBottom: '1.25rem' }}>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
                 <MapPin size={18} color="var(--bright-lime)" style={{ flexShrink: 0, marginTop: '3px' }} />
-                <span>{companyInfo.legal.address}</span>
+                <span>{companyInfo.address}</span>
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <Phone size={18} color="var(--bright-lime)" style={{ flexShrink: 0 }} />
@@ -129,14 +129,6 @@ export const Footer = ({ setActiveTab, openDevisModal, onSelectService }) => {
                 <a href={`mailto:${companyInfo.contact.email}`}>{companyInfo.contact.email}</a>
               </li>
             </ul>
-
-            <div className="footer-legal-box">
-              <strong style={{ color: 'white', display: 'block', marginBottom: '0.25rem' }}>Informations Légales :</strong>
-              AM GREEN ART {companyInfo.legal.form}<br />
-              Capital : {companyInfo.legal.capital}<br />
-              RC : {companyInfo.legal.rc} | IF : {companyInfo.legal.if}<br />
-              ICE : {companyInfo.legal.ice}
-            </div>
           </div>
         </div>
 

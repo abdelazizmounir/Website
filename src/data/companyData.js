@@ -4,16 +4,7 @@ export const companyInfo = {
   subtitle: "ESPACE VERT",
   tagline: "L'Expert de l'Espace Vert",
   slogan: "Création, Aménagement et Entretien des Espaces Verts dans la région Fès Meknès",
-  legal: {
-    form: "SARL AU",
-    capital: "100 000,00 DH",
-    address: "SIXIEME ETG 18 AV ALLAL BEN ABDALLAH, QUARTIER LIPODROM FES",
-    rc: "90863/FES",
-    tp: "13605780",
-    if: "73190115",
-    cnss: "7093190",
-    ice: "003995663000014"
-  },
+  address: "SIXIEME ETG 18 AV ALLAL BEN ABDALLAH, QUARTIER LIPODROM FES",
   contact: {
     phonePrimary: "06 05 98 21 09",
     phoneSecondary: "06 66 86 58 44",
@@ -22,6 +13,7 @@ export const companyInfo = {
     whatsapp: "212605982109",
     email: "Societeamgreenart01@gmail.com",
     emailAlt: "societeamgreenart0@gmail.com",
+    address: "SIXIEME ETG 18 AV ALLAL BEN ABDALLAH, QUARTIER LIPODROM FES",
     city: "Région Fès Meknès, Maroc",
     locationDesc: "Intervention rapide dans la région Fès Meknès."
   },

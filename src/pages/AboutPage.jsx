@@ -12,8 +12,8 @@ export const AboutPage = ({ openDevisModal }) => {
           <h1 style={{ fontSize: '3rem', fontWeight: 800, marginTop: '0.75rem', marginBottom: '1rem' }}>
             L'Expertise Paysagère au Service de Vos Espaces Verts
           </h1>
-          <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.85)', maxWidth: '720px', margin: '0 auto' }}>
-            Implantée dans la région Fès Meknès, AM GREEN ART SARL AU est spécialisée dans l'étude, l'aménagement, l'entretien des espaces verts et la commercialisation de végétaux et matériels d'arrosage.
+            <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.85)', maxWidth: '720px', margin: '0 auto' }}>
+            Implantée dans la région Fès Meknès, AM GREEN ART est spécialisée dans l'étude, l'aménagement, l'entretien des espaces verts et la commercialisation de végétaux et matériels d'arrosage.
           </p>
         </div>
       </section>
@@ -49,21 +49,17 @@ export const AboutPage = ({ openDevisModal }) => {
             <div style={{ position: 'relative' }}>
               <img src="/images/conception.jpg" alt="Conception AM Green ART" style={{ width: '100%', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-lg)' }} />
 
-              {/* Legal Info Card */}
+              {/* Company Location Card */}
               <div className="glass-panel" style={{ borderRadius: 'var(--radius-md)', padding: '1.5rem', marginTop: '1.5rem', border: '1px solid rgba(46,125,50,0.2)' }}>
                 <h4 style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--primary-dark)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <Building2 size={20} color="var(--primary-forest)" /> Mentions Légales & Fiche Société
+                  <Building2 size={20} color="var(--primary-forest)" /> Siège & Zone d'Intervention
                 </h4>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem', fontSize: '0.85rem', color: 'var(--text-main)' }}>
-                  <div><strong>Raison sociale:</strong> AM GREEN ART</div>
-                  <div><strong>Forme:</strong> {companyInfo.legal.form}</div>
-                  <div><strong>Capital Social:</strong> {companyInfo.legal.capital}</div>
-                  <div><strong>Registre Commerce:</strong> {companyInfo.legal.rc}</div>
-                  <div><strong>Identifiant Fiscal:</strong> {companyInfo.legal.if}</div>
-                  <div><strong>ICE:</strong> {companyInfo.legal.ice}</div>
-                </div>
-                <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                  <MapPin size={16} color="var(--primary-leaf)" /> Siège Social: {companyInfo.legal.address}
+                <p style={{ fontSize: '0.88rem', color: 'var(--text-main)', display: 'flex', alignItems: 'flex-start', gap: '0.5rem', margin: '0 0 0.5rem 0' }}>
+                  <MapPin size={16} color="var(--primary-leaf)" style={{ flexShrink: 0, marginTop: '3px' }} />
+                  <span><strong>Siège :</strong> {companyInfo.address}</span>
+                </p>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: 0 }}>
+                  {companyInfo.contact.locationDesc}
                 </p>
               </div>
             </div>
