@@ -55,9 +55,6 @@ export const ContactPage = () => {
                       <a href={`tel:${companyInfo.contact.phonePrimaryClean}`} style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--primary-dark)', display: 'block' }}>
                         {companyInfo.contact.phonePrimary}
                       </a>
-                      <a href={`tel:${companyInfo.contact.phoneSecondaryClean}`} style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--primary-leaf)' }}>
-                        {companyInfo.contact.phoneSecondary}
-                      </a>
                     </div>
                   </div>
 

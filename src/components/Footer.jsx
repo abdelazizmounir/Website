@@ -122,7 +122,7 @@ export const Footer = ({ setActiveTab, openDevisModal, onSelectService }) => {
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <Phone size={18} color="var(--bright-lime)" style={{ flexShrink: 0 }} />
-                <a href={`tel:${companyInfo.contact.phonePrimaryClean}`}>{companyInfo.contact.phonePrimary} / {companyInfo.contact.phoneSecondary}</a>
+                <a href={`tel:${companyInfo.contact.phonePrimaryClean}`}>{companyInfo.contact.phonePrimary}</a>
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <Mail size={18} color="var(--bright-lime)" style={{ flexShrink: 0 }} />

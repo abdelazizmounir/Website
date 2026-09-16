@@ -7,9 +7,7 @@ export const companyInfo = {
   address: "SIXIEME ETG 18 AV ALLAL BEN ABDALLAH, QUARTIER LIPODROM FES",
   contact: {
     phonePrimary: "06 05 98 21 09",
-    phoneSecondary: "06 66 86 58 44",
     phonePrimaryClean: "0605982109",
-    phoneSecondaryClean: "0666865844",
     whatsapp: "212605982109",
     email: "Societeamgreenart01@gmail.com",
     emailAlt: "societeamgreenart0@gmail.com",

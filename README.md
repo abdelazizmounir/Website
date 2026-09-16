@@ -18,7 +18,7 @@ Bienvenue sur le dépôt officiel du site web de **AM GREEN ART** (AMGA - Espace
 - 🌱 **Pépinière & Boutique Vente** : Catalogue de plantes ornementales, arbres fruitiers, engrais bio et matériel d'arrosage avec recherche par mots-clés et filtres par catégories.
 - 🖼️ **Galerie / Réalisations** : Photos réelles d'interventions et de projets terminés à Fès et région.
 - ℹ️ **À Propos** : Présentation de l'entreprise, expertise paysagère, savoir-faire global et engagements qualité.
-- 📞 **Contact & Devis Gratuit** : Formulaire de devis avec animation confetti, numéros directs (`06 05 98 21 09` / `06 66 86 58 44`), email (`Societeamgreenart01@gmail.com`) et bouton flottant WhatsApp (`https://wa.me/212605982109`).
+- 📞 **Contact & Devis Gratuit** : Formulaire de devis avec animation confetti, numéro direct (`06 05 98 21 09`), email (`Societeamgreenart01@gmail.com`) et bouton flottant WhatsApp (`https://wa.me/212605982109`).
 
 ---
 
