@@ -3,6 +3,7 @@ import { Search, Filter, Leaf, ShoppingBag, Sparkles, Check, ArrowRight, Phone, 
 import { nurseryCategories, nurseryProducts as defaultProducts } from '../data/nurseryData';
 import { companyInfo } from '../data/companyData';
 import { supabase } from '../lib/supabase';
+import { PageIntro } from '../components/PageIntro';
 
 export const NurseryPage = ({ openDevisModal }) => {
   const [products, setProducts] = useState(defaultProducts);
@@ -48,21 +49,16 @@ export const NurseryPage = ({ openDevisModal }) => {
   });
 
   return (
-    <div style={{ paddingTop: '2rem' }}>
-      {/* Hero Banner */}
-      <section style={{ background: 'linear-gradient(135deg, var(--primary-dark), var(--primary-forest))', color: 'white', padding: '4rem 0 5rem 0' }}>
-        <div className="container" style={{ textAlign: 'center' }}>
-          <h1 style={{ fontSize: '3rem', fontWeight: 800, marginTop: '0.75rem', marginBottom: '1rem' }}>
-            Vente de Plantes Ornementales, Arbres & Équipements
-          </h1>
-          <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.85)', maxWidth: '720px', margin: '0 auto' }}>
-            Retrouvez notre sélection de végétaux d'exception cultivés et acclimatés au climat marocain, engrais bio, fertilisants et matériel d'arrosage.
-          </p>
-        </div>
-      </section>
+    <div className="content-page">
+      <PageIntro
+        title="Vente de Plantes Ornementales, Arbres & Équipements"
+        description="Retrouvez notre sélection de végétaux d'exception cultivés et acclimatés au climat marocain, engrais bio, fertilisants et matériel d'arrosage."
+        image="/images/pepiniere.jpg"
+        imageAlt="Végétaux proposés par la pépinière AM Green Art"
+      />
 
       {/* Main Catalog Container */}
-      <section className="section-padding" style={{ background: 'var(--cream-bg)', marginTop: '-3rem' }}>
+      <section className="section-padding" style={{ background: 'var(--cream-bg)' }}>
         <div className="container">
           {/* Search & Category Filter Bar */}
           <div className="glass-panel" style={{ borderRadius: 'var(--radius-lg)', padding: '1.5rem', marginBottom: '2.5rem', boxShadow: 'var(--shadow-md)' }}>

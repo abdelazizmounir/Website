@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, FileText, Menu, X, Leaf, ShoppingBag, Lock } from 'lucide-react';
+import { Phone, FileText, Menu, X, Leaf, Lock } from 'lucide-react';
 import { companyInfo } from '../data/companyData';
 
 export const Navbar = ({ activeTab, setActiveTab, openDevisModal }) => {
@@ -12,20 +12,24 @@ export const Navbar = ({ activeTab, setActiveTab, openDevisModal }) => {
   };
 
   return (
-    <header className="header-sticky glass-panel">
+    <header className="header-sticky glass-panel site-header">
       <div className="navbar-container">
-        {/* Logo */}
-        <div
+        <button
+          type="button"
           className="logo-wrapper"
           onClick={() => handleNavClick('home')}
-          style={{ cursor: 'pointer' }}
+          aria-label="AM Green Art, accueil"
         >
           <img
             src="/images/logo.png"
             alt="AM Green ART Logo"
             className="logo-img"
           />
-        </div>
+          <span className="logo-copy">
+            <strong>{companyInfo.name}</strong>
+            <span>{companyInfo.subtitle}</span>
+          </span>
+        </button>
 
         {/* Desktop Navigation */}
         <nav>
@@ -84,35 +88,27 @@ export const Navbar = ({ activeTab, setActiveTab, openDevisModal }) => {
         </nav>
 
         {/* CTA Actions */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+        <div className="navbar-actions">
           <button
             onClick={() => handleNavClick('admin')}
             title="Espace Gestion Pépinière (Admin)"
-            className={`btn-outline ${activeTab === 'admin' ? 'active' : ''}`}
-            style={{
-              padding: '0.55rem',
-              borderRadius: 'var(--radius-full)',
-              background: activeTab === 'admin' ? 'var(--gold)' : 'rgba(255,255,255,0.8)',
-              color: activeTab === 'admin' ? 'var(--primary-dark)' : 'var(--primary-dark)',
-              borderColor: 'rgba(0,0,0,0.1)'
-            }}
+            className={`header-admin ${activeTab === 'admin' ? 'active' : ''}`}
           >
             <Lock size={16} />
           </button>
 
           <a
             href={`tel:${companyInfo.contact.phonePrimaryClean}`}
-            className="btn-outline"
-            style={{ padding: '0.55rem 1rem', fontSize: '0.88rem' }}
+            className="header-phone"
           >
             <Phone size={16} />
             <span className="phone-desktop-only">{companyInfo.contact.phonePrimary}</span>
           </a>
 
           <button
-            className="btn-primary"
-            onClick={openDevisModal}
-            style={{ padding: '0.6rem 1.25rem', fontSize: '0.9rem' }}
+            type="button"
+            onClick={() => openDevisModal('')}
+            className="btn-primary header-quote"
           >
             <FileText size={16} />
             Devis Gratuit
@@ -122,6 +118,7 @@ export const Navbar = ({ activeTab, setActiveTab, openDevisModal }) => {
             className="mobile-menu-btn"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X size={28} /> : <Menu size={28} />}
           </button>

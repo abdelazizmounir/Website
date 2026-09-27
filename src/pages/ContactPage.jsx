@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { companyInfo } from '../data/companyData';
+import { PageIntro } from '../components/PageIntro';
 
 export const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -21,21 +22,16 @@ export const ContactPage = () => {
   };
 
   return (
-    <div style={{ paddingTop: '2rem' }}>
-      {/* Header */}
-      <section style={{ background: 'linear-gradient(135deg, var(--primary-dark), var(--primary-forest))', color: 'white', padding: '4rem 0 5rem 0', textAlign: 'center' }}>
-        <div className="container">
-          <h1 style={{ fontSize: '3rem', fontWeight: 800, marginTop: '0.75rem', marginBottom: '1rem' }}>
-            Contactez AM GREEN ART
-          </h1>
-          <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.85)', maxWidth: '680px', margin: '0 auto' }}>
-            Notre équipe est à votre disposition pour répondre à toutes vos questions, effectuer des visites de terrain et réaliser vos devis gratuits.
-          </p>
-        </div>
-      </section>
+    <div className="content-page">
+      <PageIntro
+        title="Contactez AM GREEN ART"
+        description="Notre équipe est à votre disposition pour répondre à toutes vos questions, effectuer des visites de terrain et réaliser vos devis gratuits."
+        image="/images/hero.jpg"
+        imageAlt="Jardin paysager AM Green Art"
+      />
 
       {/* Main Grid */}
-      <section className="section-padding" style={{ background: 'var(--cream-bg)', marginTop: '-3rem' }}>
+      <section className="section-padding" style={{ background: 'var(--cream-bg)' }}>
         <div className="container">
           <div className="grid-2" style={{ gap: '3rem', alignItems: 'start' }}>
             {/* Contact Information Card */}

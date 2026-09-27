@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { DevisModal } from './components/DevisModal';
@@ -18,6 +18,35 @@ export default function App() {
   const [selectedService, setSelectedService] = useState(null);
   const [devisModalOpen, setDevisModalOpen] = useState(false);
   const [defaultDevisService, setDefaultDevisService] = useState('');
+
+  useEffect(() => {
+    const riseTargets = document.querySelectorAll(
+      'main .section-header, main .grid-3 > .card-hover, main .service-grid > .service-card, main .why-benefit'
+    );
+    const sideTargets = document.querySelectorAll('main .grid-2 > div, main .nursery-feature-visual');
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -36px 0px' });
+
+    riseTargets.forEach((element) => {
+      element.classList.add('scroll-reveal');
+      observer.observe(element);
+    });
+    sideTargets.forEach((element) => {
+      element.classList.add('scroll-reveal--side');
+      observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, [activeTab]);
 
   const handleSelectService = (service) => {
     setSelectedService(service);

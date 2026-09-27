@@ -2,21 +2,17 @@ import React from 'react';
 import { ShieldCheck, Award, Users, CheckCircle2, Clock, MapPin, Building2, FileText, Phone } from 'lucide-react';
 import { companyInfo } from '../data/companyData';
 import { WhyChooseUs } from '../components/WhyChooseUs';
+import { PageIntro } from '../components/PageIntro';
 
 export const AboutPage = ({ openDevisModal }) => {
   return (
-    <div style={{ paddingTop: '2rem' }}>
-      {/* Hero */}
-      <section style={{ background: 'linear-gradient(135deg, var(--primary-dark), var(--primary-forest))', color: 'white', padding: '4rem 0 5rem 0', textAlign: 'center' }}>
-        <div className="container">
-          <h1 style={{ fontSize: '3rem', fontWeight: 800, marginTop: '0.75rem', marginBottom: '1rem' }}>
-            L'Expertise Paysagère au Service de Vos Espaces Verts
-          </h1>
-            <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.85)', maxWidth: '720px', margin: '0 auto' }}>
-            Implantée dans la région Fès Meknès, AM GREEN ART est spécialisée dans l'étude, l'aménagement, l'entretien des espaces verts et la commercialisation de végétaux et matériels d'arrosage.
-          </p>
-        </div>
-      </section>
+    <div className="content-page">
+      <PageIntro
+        title="L'Expertise Paysagère au Service de Vos Espaces Verts"
+        description="Implantée dans la région Fès Meknès, AM GREEN ART est spécialisée dans l'étude, l'aménagement, l'entretien des espaces verts et la commercialisation de végétaux et matériels d'arrosage."
+        image="/images/conception.jpg"
+        imageAlt="Conception paysagère par AM Green Art"
+      />
 
       {/* Story & Company Info */}
       <section className="section-padding" style={{ background: 'white' }}>

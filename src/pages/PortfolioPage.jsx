@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Eye, FileText, CheckCircle2, Sparkles, MapPin } from 'lucide-react';
-import { companyInfo } from '../data/companyData';
+import { FileText, MapPin } from 'lucide-react';
+import { PageIntro } from '../components/PageIntro';
 
 export const PortfolioPage = ({ openDevisModal }) => {
   const [filter, setFilter] = useState('all');
@@ -83,21 +83,16 @@ export const PortfolioPage = ({ openDevisModal }) => {
   const filteredProjects = filter === 'all' ? projects : projects.filter(p => p.category === filter);
 
   return (
-    <div style={{ paddingTop: '2rem' }}>
-      {/* Header */}
-      <section style={{ background: 'linear-gradient(135deg, var(--primary-dark), var(--primary-forest))', color: 'white', padding: '4rem 0 5rem 0', textAlign: 'center' }}>
-        <div className="container">
-          <h1 style={{ fontSize: '3rem', fontWeight: 800, marginTop: '0.75rem', marginBottom: '1rem' }}>
-            Nos Réalisations Paysagères dans la région Fès Meknès
-          </h1>
-          <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.85)', maxWidth: '700px', margin: '0 auto' }}>
-            Découvrez un aperçu de nos projets d'aménagement, d'installation d'irrigation et de contrats d'entretien réussis.
-          </p>
-        </div>
-      </section>
+    <div className="content-page">
+      <PageIntro
+        title="Nos Réalisations Paysagères dans la région Fès Meknès"
+        description="Découvrez un aperçu de nos projets d'aménagement, d'installation d'irrigation et de contrats d'entretien réussis."
+        image="/images/portfolio_villa.jpg"
+        imageAlt="Aménagement paysager réalisé par AM Green Art"
+      />
 
       {/* Main Grid */}
-      <section className="section-padding" style={{ background: 'var(--cream-bg)', marginTop: '-3rem' }}>
+      <section className="section-padding" style={{ background: 'var(--cream-bg)' }}>
         <div className="container">
           {/* Filters */}
           <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>

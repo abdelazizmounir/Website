@@ -2,33 +2,29 @@ import React from 'react';
 import { ArrowRight, CheckCircle2, FileText, Sparkles } from 'lucide-react';
 import { ImageCarousel } from '../components/ImageCarousel';
 import { servicesData } from '../data/servicesData';
+import { PageIntro } from '../components/PageIntro';
 
 export const ServicesHubPage = ({ onSelectService, openDevisModal }) => {
   return (
-    <div style={{ paddingTop: '2rem' }}>
-      {/* Header */}
-      <section style={{ background: 'linear-gradient(135deg, var(--primary-dark), var(--primary-forest))', color: 'white', padding: '4rem 0 5rem 0' }}>
-        <div className="container" style={{ textAlign: 'center' }}>
-          <h1 style={{ fontSize: '3rem', fontWeight: 800, marginTop: '0.75rem', marginBottom: '1rem' }}>
-            Nos 7 Services Paysagers & Entretien
-          </h1>
-          <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.85)', maxWidth: '700px', margin: '0 auto' }}>
-            Chaque service bénéficie d'une équipe dédiée et d'équipements de pointe. Cliquez sur un service pour consulter sa page détaillée.
-          </p>
-        </div>
-      </section>
+    <div className="content-page">
+      <PageIntro
+        title="Nos 7 Services Paysagers & Entretien"
+        description="Chaque service bénéficie d'une équipe dédiée et d'équipements de pointe. Cliquez sur un service pour consulter sa page détaillée."
+        image="/images/irrigation.jpg"
+        imageAlt="Installation professionnelle de système d'irrigation"
+      />
 
       {/* Grid of 7 Services */}
-      <section className="section-padding" style={{ background: 'var(--cream-bg)', marginTop: '-2.5rem' }}>
+      <section className="section-padding" style={{ background: 'var(--cream-bg)' }}>
         <div className="container">
           <div className="grid-3">
             {servicesData.map((service, index) => (
               <div 
                 key={service.id}
-                className="card-hover animate-fade-in"
+                className="card-hover"
                 style={{
                   display: 'flex', flexDirection: 'column', background: 'white',
-                  cursor: 'pointer', animationDelay: `${index * 0.1}s`
+                  cursor: 'pointer'
                 }}
                 onClick={() => onSelectService(service)}
               >
