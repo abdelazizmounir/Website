@@ -6,9 +6,9 @@ export const companyInfo = {
   slogan: "Création, Aménagement et Entretien des Espaces Verts dans la région Fès Meknès",
   address: "SIXIEME ETG 18 AV ALLAL BEN ABDALLAH, QUARTIER LIPODROM FES",
   contact: {
-    phonePrimary: "06 05 98 21 09",
-    phonePrimaryClean: "0605982109",
-    whatsapp: "212605982109",
+    phonePrimary: "+212 666-869498",
+    phonePrimaryClean: "+212666869498",
+    whatsapp: "212666869498",
     email: "Societeamgreenart01@gmail.com",
     emailAlt: "societeamgreenart0@gmail.com",
     address: "SIXIEME ETG 18 AV ALLAL BEN ABDALLAH, QUARTIER LIPODROM FES",

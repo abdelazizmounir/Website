@@ -172,7 +172,7 @@ export const DevisModal = ({ isOpen, onClose, defaultService }) => {
                       <input
                         type="tel"
                         required
-                        placeholder="ex: 06 05 98 21 09"
+                        placeholder="ex: 06 66 86 94 98"
                         className="form-input"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -288,7 +288,7 @@ export const DevisModal = ({ isOpen, onClose, defaultService }) => {
                       <input
                         type="tel"
                         required
-                        placeholder="ex: 06 05 98 21 09"
+                        placeholder="ex: 06 66 86 94 98"
                         className="form-input"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
